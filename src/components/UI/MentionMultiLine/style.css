@@ -1,0 +1,27 @@
+
+.mention-multiple-triggers {
+    width: 100%;
+    min-height: 100px;
+}
+
+.mentions__input {
+    border: 0;
+    outline: none;
+    width: 100%;
+}
+
+.mentions__suggestions {
+    border-radius: var(--borderSquared);
+    box-shadow: var(--boxShadowTabs);
+    overflow: hidden;
+}
+
+.mentions-mention {
+    border-radius: 4px;
+}
+.mention-suggested-item {
+    padding: 5px 20px;
+}
+.focused {
+    background: var(--bkPagePrimary);
+}

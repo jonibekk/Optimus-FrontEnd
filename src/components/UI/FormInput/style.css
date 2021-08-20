@@ -1,0 +1,29 @@
+.form-input-field {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    margin: 12px auto;
+}
+.form-input {
+    box-sizing: border-box;
+    border: 1px solid var(--borderLine);
+    border-radius: var(--borderSquared);
+    background: var(--bkPagePrimary);
+    outline: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 5px 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.form-input:focus {
+    border: 2px solid var(--contentPrimary);
+}
+
+.error-input {
+    border: 2px solid var(--fgRed);
+}

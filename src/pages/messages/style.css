@@ -1,0 +1,19 @@
+
+.messages-container {
+    margin: 15px;
+    display: flex;
+    column-gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.no-message-body {
+    flex: .7;
+    border: 1px solid var(--borderLine);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

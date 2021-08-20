@@ -1,0 +1,125 @@
+
+.btn_ {
+    outline: none;
+    box-sizing: border-box;
+    padding: 8px 15px;
+    font-size: medium;
+    width: 100%;
+    border: 0;
+    font-weight: bold;
+    transition: all .2s ease-in-out;
+    font-family: 'Nunito', sans-serif;
+
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.btn__icon {
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn__primary {
+    color: var(--fgWhite);
+    background: var(--contentPrimary);
+    border-radius: var(--borderSquared);
+}
+.btn__primary__round {
+    color: var(--fgWhite);
+    background: var(--contentPrimary);
+    border-radius: var(--borderRound);
+}
+.btn__primary__rounded {
+    color: var(--fgWhite);
+    background: var(--contentPrimary);
+    border-radius: var(--borderRounded);
+}
+.btn__primary:hover,
+.btn__primary__round:hover,
+.btn__primary__rounded:hover {
+    box-shadow: var(--boxShadow);
+    background: var(--contentPrimaryDarker);
+}
+
+.btn__danger {
+    color: var(--fgWhite);
+    background: var(--fgRed);
+    border-radius: var(--borderSquared);
+}
+.btn__danger__round {
+    color: var(--fgWhite);
+    background: var(--fgRed);
+    border-radius: var(--borderRound);
+}
+.btn__danger__rounded {
+    color: var(--fgWhite);
+    background: var(--fgRed);
+    border-radius: var(--borderRounded);
+}
+.btn__danger:hover,
+.btn__danger__round:hover,
+.btn__danger__rounded:hover {
+    box-shadow: var(--boxShadow);
+    background: var(--fgRedDarker);
+}
+
+.btn__gray {
+    color: var(--fgGray);
+    background: var(--fgGrayLight);
+    border-radius: var(--borderSquared);
+}
+.btn__gray__round {
+    color: var(--fgGray);
+    background: var(--fgGrayLight);
+    border-radius: var(--borderRound);
+}
+.btn__gray__rounded {
+    color: var(--fgGray);
+    background: var(--fgGrayLight);
+    border-radius: var(--borderRounded);
+}
+.btn__gray:hover,
+.btn__gray__round:hover,
+.btn__gray__rounded:hover {
+    box-shadow: var(--boxShadow);
+    background: var(--bkPagePrimary);
+}
+
+.btn__white {
+    color: var(--contentPrimary);
+    background: var(--fgWhite);
+    border-radius: var(--borderSquared);
+}
+.btn__white__round {
+    color: var(--contentPrimary);
+    background: var(--fgWhite);
+    border-radius: var(--borderRound);
+}
+.btn__white__rounded {
+    color: var(--contentPrimary);
+    background: var(--fgWhite);
+    border-radius: var(--borderRounded);
+}
+.btn__white:hover,
+.btn__white__round:hover,
+.btn__white__rounded:hover {
+    box-shadow: var(--boxShadow);
+    color: var(--fgWhite);
+    background: var(--contentPrimary);
+}
+
+.btn__disabled,
+.btn__disabled__rounded,
+.btn__disabled:hover {
+    color: var(--fgWhite);
+    background: var(--disabledBtn);
+}
+.btn__disabled {
+    border-radius: var(--borderSquared);
+}
+.btn__disabled__rounded {
+    border-radius: var(--borderRounded);
+}

@@ -1,0 +1,119 @@
+
+.team-member-main {
+    width: 100%;    
+    box-sizing: border-box;
+    position: relative;
+}
+
+.team-member-main-header {
+    padding-top: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.team-member-main-body {
+    border-radius: var(--borderSquared);
+    border: 1px solid var(--borderLine);
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+    margin-top: 10px;
+}
+
+.team-member-main-header-add-member,
+.team-member-main-header-seach {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    color: var(--fgGray);
+    border: 1px solid var(--borderLine);
+    border-radius: var(--borderSquared);
+    padding: 5px 10px;
+    flex: 1;
+}
+.team-member-main-header-seach {
+    background: var(--bkPageSecondary);
+}
+.team-member-main-header-seach > input {
+    width: 100%;
+    outline: none;
+    border: 0;
+}
+
+.team-member-main-header-add-member {
+    padding: 0;
+    border: 0;
+}
+
+.team-member-main-header-add-member > input {
+    outline: none;
+    padding: 5px 10px;
+    border: 1px solid var(--borderLine);
+    border-radius: var(--borderSquared);
+    width: 100%;
+}
+
+.team-member-main-body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    background: var(--bkPageSecondary);
+}
+.team-member-main-body-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 0.9em;
+    border-bottom: 1px solid var(--borderLine);
+}
+.team-member-main-body-title {
+    display: flex;
+    align-items: center;
+    font-size: .9em;
+    padding: 0 10px;
+    color: var(--fgGray);
+    border-bottom: 1px solid var(--borderLine);
+}
+.team-member-main-body-item-t1,
+.team-member-main-body-item-t2 {
+    min-width: 310px;
+    flex-shrink: 0;
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+.team-member-main-body-item-t2 {
+    flex: 1;
+}
+.team-member-main-body-item-t3,
+.team-member-main-body-item-t4 {
+    min-width: 100px;
+    flex: 0.2;
+}
+.team-member-main-body-item-t4 {
+    text-align: center;
+}
+
+.member-tag {
+    padding: 3px 7px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: var(--borderRounded);
+}
+
+.tag-owner {
+    color: var(--fgPrimary);
+    border: 1px solid var(--fgPrimary);
+}
+.tag-admin {
+    color: var(--fgBlue);
+    border: 1px solid var(--fgBlue);
+}
+.tag-member {
+    color: var(--fgOrange);
+    border: 1px solid var(--fgOrange);
+}
+.tag-pending {
+    color: var(--fgRed);
+    border: 1px solid var(--fgRed);
+}

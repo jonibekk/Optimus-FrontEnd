@@ -1,0 +1,96 @@
+
+.sidebar-container {
+    width: 100%;
+    height: 100vh;
+    border-right: 1px solid var(--borderLine);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.sidebar-logo-wrapper {
+    padding: 10px 50px;
+    margin-bottom: 40px;
+}
+.sidebar-logo-wrapper > .logo {
+    width: 150px;
+}
+
+.sidebar-option {
+    margin: 0 20px;
+    padding: 20px 25px;
+    text-decoration: none;
+    color: var(--fgGray);
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 30px;
+}
+.sidebar-option:hover > span,
+.sidebar-option:hover > ion-icon {
+    color: var(--contentPrimary);
+}
+.sidebar-option > span {
+    display: flex;
+    align-items: center;
+}
+.sidebar-option > ion-icon {
+    font-size: 1.2em;
+}
+
+.sidebar-option-active {
+    background: var(--bkPrimaryShadow);
+    border-radius: var(--borderRounded);
+}
+.sidebar-option-active > span,
+.sidebar-option-active > ion-icon {
+    color: var(--contentPrimary);
+}
+
+.sidebar-make-action {
+    margin: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-settings {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    column-gap: 20px;
+
+    background: var(--bkPageSecondary);
+    border-radius: var(--borderSquared);
+    font-weight: 500;
+    color: var(--fgGray);
+}
+.sidebar-settings > span,
+.sidebar-settings > ion-icon {
+    transition: all .2s ease-in-out;
+}
+.sidebar-settings > ion-icon {
+    font-size: 25px;
+}
+.sidebar-settings > span:last-child {
+    font-size: 20px;
+}
+.sidebar-settings:hover {
+    background: var(--bkPagePrimary);
+}
+
+.sidebar-settings:hover ion-icon {
+    transform: rotateZ(90deg)
+}
+.sidebar-settings:hover span:first-child {
+    transform: rotateZ(-90deg);
+}

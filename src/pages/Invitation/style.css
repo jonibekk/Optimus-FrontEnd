@@ -1,0 +1,82 @@
+
+.invitation-container {
+    width: 100%;
+}
+
+.invitation-wrapper {
+    max-width: 450px;
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 100px;
+    padding: 30px;
+    padding-bottom: 60px;
+}
+.invitation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.invitation-wrapper div.invitation-team {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--borderLine);
+    border-radius: var(--borderRound);
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+div.invitation-team > span,
+div.invitation-from-user > span {
+    width: 280px;
+    font-size: 1.6em;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div.invitation-from-user > span {
+    font-size: 1.2em;
+}
+
+.invitation-from-user {
+    margin-bottom: 40px;
+    padding: 5px 7px;
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    border: 1px solid var(--borderLine);
+    border-radius: var(--borderRound);
+}
+.invitation-from-text {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--fgGray);
+}
+
+.invitation-fullname {
+    display: flex;
+    column-gap: 15px;
+}
+
+.has-account-link {
+    text-align: end;
+    font-size: small;
+    margin: 5px auto;
+}
+
+.invitation-btn {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.input-label {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--fgGrayDark);
+}

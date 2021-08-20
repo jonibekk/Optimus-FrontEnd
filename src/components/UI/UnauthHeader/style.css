@@ -1,0 +1,32 @@
+
+.unauth-header-container {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.unauth-nav-items-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.unauth-nav-item {
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    padding: 5px 15px;
+    font-weight: bold;
+    color: var(--fgBlack);
+    border-bottom: 2px solid var(--bkPageSecondary);
+}
+.unauth-nav-item:hover {
+    color: var(--fgPrimary);
+}
+.unauth-active {
+    color: var(--fgPrimary);
+    border-bottom: 2px solid var(--fgPrimary);
+}

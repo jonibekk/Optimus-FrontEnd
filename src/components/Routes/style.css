@@ -1,0 +1,15 @@
+
+.with-sidebar-container {
+    display: flex;
+}
+.with-sidebar-section-sidebar {
+    flex: 0.2;
+    width: 100%;
+    max-width: 300px;
+    background: var(--bkPageSecondary);
+}
+.with-sidebar-section-body {
+    flex: 0.9;
+    width: 100%;
+    background: var(--bkPagePrimary);
+}

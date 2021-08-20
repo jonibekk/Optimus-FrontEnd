@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap');
+
+.logo {
+    font-weight: bolder;
+    font-family: 'Asap', sans-serif;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 260px;
+}
+.logo > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

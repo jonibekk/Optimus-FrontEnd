@@ -1,0 +1,55 @@
+
+.kr-item-container {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: var(--bkPagePrimary);
+    border-radius: var(--borderRounded);
+
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+.kr-item-content {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.kr-item-info {
+    display: flex;
+    flex-direction: column;
+}
+.kr-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.kr-edit-icon {
+    font-size: 17px;
+    margin-left: 15px;
+    color: var(--fgGrayDarker);
+}
+
+.kr-owner-date-wrapper {
+    width: 100px;
+    min-height: 80px;
+    position: relative;
+}
+.kr-owner-date-wrapper > .avatar {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.kr-owner-date-wrapper > small {
+    font-weight: bold;
+    color: var(--fgGray);
+    font-size: 12px;
+    word-break: break-all;
+    word-wrap: break-word;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

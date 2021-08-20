@@ -1,0 +1,107 @@
+
+.goal-item-wrapper {
+    width: 100%;
+    max-width: 450px;
+    min-height: 330px;
+    border: 1px solid var(--borderLine);
+    border-radius: var(--borderRounded);
+    background-color: var(--bkPageSecondary);
+    padding: 0 10px;
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.goal-item-wrapper:hover {
+    cursor: pointer;
+    background: var(--fgGrayLight);
+}
+
+.goal-item-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.goal-item-ui {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.goal-item-progress,
+.goal-item-add-kr,
+.goal-item-kr {
+    width: 115px;
+    height: auto;
+    overflow: hidden;
+    transition: all .2s linear;
+    border-radius: var(--borderRounded);
+    background: var(--bkPagePrimary);
+}
+.goal-item-progress:hover,
+.goal-item-add-kr:hover,
+.goal-item-kr:hover {
+    transform: scale(1.1);
+}
+
+.goal-item-progress > div:first-child,
+.goal-item-add-kr > div:first-child,
+.goal-item-kr > div:first-child {
+    padding: 10px 0;
+}
+.goal-item-kr > div:last-child,
+.goal-item-add-kr > div:last-child,
+.goal-item-progress > div:last-child {
+    width: 100%;
+    padding: 5px;
+}
+.goal-item-kr-text,
+.goal-item-add-kr-text,
+.goal-item-progress-text {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 0 5px;
+}
+.goal-item-add-kr-text {
+    color: var(--fgGray);
+}
+
+.goal-item-add-kr {
+    cursor: pointer;
+}
+
+.goal-item-name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.4em;
+    text-align: center;
+    line-height: 1.3;
+}
+
+
+.goal-item-footer {
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    margin-top: 15px;
+}
+
+.goal-item-created-date {
+    align-self: center;
+    font-weight: bold;
+    color: var(--fgGray);
+}

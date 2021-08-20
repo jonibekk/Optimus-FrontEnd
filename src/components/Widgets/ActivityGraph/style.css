@@ -1,0 +1,73 @@
+
+
+.activity-graph-wrapper {
+    text-align: center;
+    width: 100%;
+}
+
+.activity-graph-title {
+    font-size: 1.4em;
+    font-weight: 500;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+svg.react-calendar-heatmap {
+    padding-top: 10px;
+    padding-right: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.react-calendar-heatmap text {
+  font-size: 10px;
+  fill: #aaa;
+}
+
+.react-calendar-heatmap .react-calendar-heatmap-small-text {
+  font-size: 5px;
+}
+
+.react-calendar-heatmap rect:hover {
+  cursor: pointer;
+}
+
+/*
+ * Default color scale
+ */
+
+.react-calendar-heatmap .color-empty {
+  fill: #eee;
+  width: 5px;
+  height: 5px;
+}
+
+/*
+ * Gitlab color scale
+ */
+
+.react-calendar-heatmap .color-gitlab-0 {
+  fill: #eee;
+  width: 5px;
+  height: 5px;
+}
+.react-calendar-heatmap .color-gitlab-1 {
+  fill: #7543C14f;
+  width: 7px;
+  height: 7px;
+}
+.react-calendar-heatmap .color-gitlab-2 {
+  fill: #7543C18f;
+  width: 8px;
+  height: 8px;
+}
+.react-calendar-heatmap .color-gitlab-3 {
+  fill: #7543C1bf;
+  width: 9px;
+  height: 9px;
+}
+.react-calendar-heatmap .color-gitlab-4 {
+  fill: #7543C1ff;
+  width: 10px;
+  height: 10px;
+}

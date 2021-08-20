@@ -1,13 +1,118 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+
+body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  /* ---------------- UI Theme Colors ----------------- */
+  /* Light Mode */
+  --bkPagePrimary: #F2F4F7;
+  --bkPagePrimaryHover: #f2f4f769;
+  --bkPageSecondary: #FFFFFF;
+  --bkPageWhite: #FFFFFF;
+  --contentPrimary: #7543C1;
+  --contentPrimaryDarker: #5d28ac;
+  --bkPrimaryShadow: #7543C133;
+  --disabledBtn: #5d28ac71;
+  --fgPrimary: #7543C1;
+  --fgPrimaryDarker: #5d28ac;
+  --fgBlue: #0077b6;
+  --fgBlueDarker: #01659b;
+  --fgRed: #f94144e0;
+  --fgRedDarker: #cf1114d5;
+  --fgOrange: #ff6f00d0;
+  --fgOrangeDarker: #d35b00df;
+  --fgGreen: #1ed760;
+  --fgGreenDarker: #13ad49;
+  --fgGray: #5B7083;
+  --fgGrayDarker: #415566;
+  --fgGrayLight: #DBE3E8;
+  --fgWhite: #FFFFFF;
+  --fgBlack: #000000;
+  --borderLine: #DBE3E8;
+  --borderRound: 99px;
+  --borderRounded: 20px;
+  --borderSquared: 4px;
+  --boxShadow: 0 2px 10px 0 rgba(219, 227, 232, 0.25);
+  --boxShadowTabs: 0 2px 10px 5px rgb(219, 227, 232, 0.5);
+}
+
+.dropdown-item {
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.backdrop {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+.dropdown-menu {
+  border-radius: var(--borderSquared);
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.model-close {
+  color: var(--fgGrayDarker);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: all .2s ease-in-out;
+}
+.model-close:hover,
+.model-close:focus {
+  color: var(--fgGrayDarker);
+  text-decoration: none;
+  cursor: pointer;
+  transform: scale(1.2) rotateZ(90deg);
+}
+
+.vertical-space-10 {
+  height: 10px;
+}
+.vertical-space-15 {
+  height: 15px;
+}
+.vertical-space-20 {
+  height: 20px;
+}
+.vertical-space-25 {
+  height: 25px;
+}
+.vertical-space-30 {
+  height: 30px;
+}
+.vertical-space-35 {
+  height: 35px;
+}
+.vertical-space-40 {
+  height: 40px;
+}
+.vertical-space-45 {
+  height: 45px;
+}
+.vertical-space-50 {
+  height: 50px;
 }

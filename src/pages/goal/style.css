@@ -1,0 +1,22 @@
+
+.goals-container {
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px 20px;
+
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 80px);
+    overflow: scroll;
+}
+
+.goals-my-goals,
+.goals-subscribed-goals,
+.goals-all-goals {
+    width: 100%;
+    border: 1px solid var(--borderLine);
+    border-radius: var(--borderRounded);
+    margin-bottom: 20px;
+    transition: all .2s linear;
+}

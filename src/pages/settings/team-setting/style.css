@@ -1,0 +1,66 @@
+.team-setting-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-setting-header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    column-gap: 50px;
+}
+.team-setting-header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    flex: 1;
+}
+
+.team-setting-name-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.team-setting-name-wrapper > .fa-pencil-alt {
+    position: absolute;
+    font-size: 1.1em;
+    color: var(--fgGrayLight);
+    right: 10px;
+}
+
+.team-setting-name-input {
+    width: 100%;
+    padding: 0;
+    padding-left: 5px;
+    font-size: 2em;
+    border: 0;
+    outline: 0;
+}
+.team-setting-name-input:focus {
+    border-bottom: 2px solid var(--fgPrimary);
+}
+.team-setting-name-input:focus + .fa-pencil-alt {
+    color: var(--fgGray);
+}
+
+.team-setting-header > span {
+    border: 1px solid var(--borderLine);
+    border-radius: 99px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+.team-setting-header > span:hover {
+    transform: rotateZ(90deg);
+}

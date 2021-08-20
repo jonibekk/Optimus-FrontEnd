@@ -1,0 +1,17 @@
+
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+}
+.page-not-found > img {
+    max-width: 404px;
+}
+.page-not-found > h1 {
+    margin-top: 20px;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--contentPrimary);
+}
