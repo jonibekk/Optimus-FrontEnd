@@ -237,7 +237,7 @@ const CreateAction = ({ onclick, showModal }) => {
             <div className='backdrop' onClick={onClose} />
             <div className="post-modal-content">
                 <div className='post-modal-header'>
-                    <Avatar width='35px' height='35px' borderRadius='var(--borderRound)' />
+                    <Avatar width='35px' height='35px' src={auth.meData && auth.meData.avatar_url} borderRadius='var(--borderRound)' />
                     <span className="model-close" onClick={onClose}>&times;</span>
                 </div>
                 <div className='post-modal-body'>

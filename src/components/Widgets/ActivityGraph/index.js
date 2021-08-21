@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { connect, useDispatch, useSelector } from "react-redux";
 import dayjs from 'dayjs';
 import CalendarHeatmap from "react-calendar-heatmap";
 import { loadActivityHeatmap } from "../../../store/Actions/UiAction";
@@ -80,4 +80,4 @@ const getFullHeatMap = (numberOfDays, heatMapData) => {
     return tempHeatMapData;
 }
 
-export default ActivityGraph;
+export default connect(null, [])(ActivityGraph);

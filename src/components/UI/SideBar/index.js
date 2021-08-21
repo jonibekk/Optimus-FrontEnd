@@ -32,7 +32,7 @@ const SideBar = () => {
 
             <SideBarOption onclick={onLinkClicked} path='/home' text='Home' iconClass='home-outline' active={active.startsWith('/home')} />
             <SideBarOption onclick={onLinkClicked} path='/goals' text='Goals' iconClass='trophy-outline' active={active.startsWith('/goals')} />
-            <SideBarOption onclick={onLinkClicked} path='/messages' text='Messages' iconClass='chatbubbles-outline' active={active.startsWith('/messages')} />
+            {/*<SideBarOption onclick={onLinkClicked} path='/messages' text='Messages' iconClass='chatbubbles-outline' active={active.startsWith('/messages')} />*/}
             <SideBarOption onclick={onLinkClicked} path='/dashboard' text='Dashboard' iconClass='grid-outline' active={active.startsWith('/dashboard')} />
             {/*<SideBarOption onclick={onLinkClicked} path='/evaluation' text='Evaluation' iconClass='fas fa-gavel' active={active.startsWith('/evaluation')} />*/}
             {/* fas fa-bullseye */}

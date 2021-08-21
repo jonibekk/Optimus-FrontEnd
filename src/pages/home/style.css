@@ -18,6 +18,7 @@
     min-width: 500px;
     max-width: 600px;
     overflow: auto;
+    padding: 0 10px;
 }
 .home-center-wrapper::-webkit-scrollbar {
   display: none;

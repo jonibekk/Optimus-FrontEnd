@@ -8,6 +8,7 @@ import {
     ACTION
 } from '../Api';
 import { loadFeedData } from './HomeFeedAction';
+import { loadActivityHeatmap } from './UiAction';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL
 
@@ -67,6 +68,7 @@ export const createAction = (goalId, krId, data) => async (dispatch) => {
         const res = await axios.post(`${ACTION}/goal/${goalId}/kr/${krId}/create`, data);
         console.log(res.data);
         dispatch(loadFeedData());
+        dispatch(loadActivityHeatmap())
     } catch (err) {
         console.log(err.response.data);
     }

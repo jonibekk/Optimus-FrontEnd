@@ -1,6 +1,41 @@
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { postLike } from '../../../../store/Actions/PostAction';
 import './style.css'
 
 function PostItemContent({ data }) {
+
+    const dispatch = useDispatch();
+    const auth = useSelector(state => state.auth)
+    const [Liked, setLiked] = useState(false);
+
+    const myLikeId = () => {
+        const myLike = data.action.likes.filter(like => like.user_id === auth.meData.id);
+        return myLike.length > 0 ? myLike[0].id : -1;
+    }
+
+    const onPostLikeAction = async () => {
+        const status = Liked ? 'dislike' : 'like';
+        await dispatch(postLike(data.action.id, status, myLikeId()))
+            .then(success => {
+                if (status === 'like') {
+                    setLiked(success);
+                } else {
+                    setLiked(false);
+                }
+            }).catch((failed) => {
+                console.log(failed);
+            })
+    }
+
+    useEffect(() => {
+        data.action.likes.forEach(like => {
+            if (like.user_id === auth.meData.id) {
+                setLiked(true);
+                return;
+            }
+        });
+    }, [auth, data.action.likes]);
 
     return (
         <div className='post-item-content'>
@@ -20,8 +55,14 @@ function PostItemContent({ data }) {
                 <p className='content-body'>{data.action.body}</p>
             </div>
             <div className='content-action-wrapper'>
-                <span><i className="fas fa-heart"></i>&nbsp; {data.action.likes_count > 0 && data.action.likes_count} likes</span>
-                <span><i className="fas fa-comment-dots"></i>&nbsp; {data.action.comments_count > 0 && data.action.comments_count} comments</span>
+                <span className={Liked ? 'post-item-liked' : ''} onClick={onPostLikeAction}>
+                    {!Liked && <ion-icon name="heart-outline"></ion-icon>}
+                    {Liked && <ion-icon name="heart"></ion-icon>}
+                    &nbsp; {data.action.likes_count > 0 ? data.action.likes_count : 0} {data.action.likes_count === 1 ? 'like' : 'likes'}
+                </span>
+                <span><ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                    &nbsp; {data.action.comments_count > 0 && data.action.comments_count} comments
+                </span>
             </div>
         </div>
     )

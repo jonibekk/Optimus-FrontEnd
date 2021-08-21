@@ -3,11 +3,12 @@ import './style.css';
 import FormControl from '../../components/UI/FormControl';
 import Button from '../../components/UI/Button';
 import Logo from '../../components/UI/Logo';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import Avatar from '../../components/UI/Avatar';
-import { useDispatch, useSelector } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import { getGmtTimezone, validEmail } from '../../components/Util/Utils';
 import { CreateNewTeam } from '../../store/Actions/TeamAction'
+import { useHistory } from 'react-router-dom';
 
 
 const distinct = (value, index, self) => {
@@ -18,12 +19,14 @@ const CreateTeam = (props) => {
 
     const dispatch = useDispatch();
     const auth = useSelector(state => state.auth);
+    const history = useHistory();
+
     let imgUpload = useRef();
 
     const [invites, setInvites] = useState([]);
 
     const [data, setData] = useState({
-        name: `${auth.meData.first_name}'s team.`,
+        name: 'New team',
         image: null,
         invite: '',
         wrongEmail: false,
@@ -65,6 +68,7 @@ const CreateTeam = (props) => {
             const formData = prepareData(data);
             dispatch(CreateNewTeam(formData));
             setData({ ...data, submitError: false });
+            history.push('/home');
         } else {
             setData({ ...data, submitError: true });
         }
@@ -87,9 +91,7 @@ const CreateTeam = (props) => {
         return fd;
     }
 
-    useEffect(() => { }, [dispatch]);
-
-    return (
+    return auth.meData && (
         <div className='create-team-container'>
             <div className='create-team-wrapper'>
                 <div className='create-team-illustration' >
@@ -152,4 +154,4 @@ const CreateTeam = (props) => {
     )
 }
 
-export default (CreateTeam);
+export default connect(null, [])(CreateTeam);

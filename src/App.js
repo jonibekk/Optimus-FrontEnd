@@ -13,7 +13,7 @@ import NotFound from './pages/notfound';
 import WithSidebar from './components/Routes/WithSidebar';
 import Dashboard from './pages/dashboard';
 import Invitation from './pages/Invitation';
-import Messages from './pages/messages';
+// import Messages from './pages/messages';
 import Goal from './pages/goal';
 import Home from './pages/home';
 import CreateTeam from './pages/createTeam';
@@ -41,13 +41,12 @@ const App = (props) => {
         <Route exact path="/login" component={SignIn} />
         <Route exact path="/register" component={SignUp} />
         <Route exact path='/invitation/:token' component={Invitation} />
+        <Route exact path='/create-new-team' component={CreateTeam} />
         <WithSidebar path='/home' component={Home} />
         <WithSidebar path='/goals' component={Goal} />
-        <WithSidebar path='/messages' component={Messages} />
         <WithSidebar path='/dashboard' component={Dashboard} />
         <PrivateRoute location={props.location} exact path='/settings'><Redirect to='/settings/profile' /></PrivateRoute>
         <PrivateRoute location={props.location} exact path='/settings/:settingsId' component={Settings} />
-        <PrivateRoute location={props.location} exact path='/create-new-team' component={CreateTeam} />
         <PrivateRoute location={props.location} exact path='/user/:id' component={UserProfile} />
         <Route location={props.location} path='*' component={NotFound} />
       </Switch>

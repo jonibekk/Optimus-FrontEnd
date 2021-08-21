@@ -1,4 +1,5 @@
 
+import { useSelector } from 'react-redux';
 import CenterWrapper from './CenterWrapper';
 import LeftWrapper from './LeftWrapper';
 // import RightWrapper from './RightWrapper';
@@ -6,7 +7,9 @@ import './style.css';
 
 const Home = () => {
 
-    return (
+    const auth = useSelector(state => state.auth);
+
+    return auth.meData && auth.meData.current_team_id && (
         <div className='home-container'>
             <section className='home-left-wrapper'>
                 <LeftWrapper />
