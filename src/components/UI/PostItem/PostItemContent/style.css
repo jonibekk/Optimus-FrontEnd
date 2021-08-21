@@ -104,8 +104,23 @@ img.content-img {
     padding-right: 15px;
 
     display: flex;
+    align-items: center;
     column-gap: 20px;
+}
+
+.content-action-wrapper > span {
+    display: flex;
+    align-items: center;
     color: var(--fgGray);
     font-size: .9em;
     font-weight: 600;
+    cursor: pointer;
+}
+.content-action-wrapper > span ion-icon {
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+.content-action-wrapper > span.post-item-liked {
+    color: var(--fgRed);
+    font-weight: bold;
 }

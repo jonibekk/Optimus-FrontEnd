@@ -2,7 +2,6 @@
 .post-item-container {
     background: var(--bkPageSecondary);
     box-shadow: var(--boxShadow);
-    border: 1px solid var(--borderLine);
     border-radius: var(--borderRounded);
     margin-top: 10px;
     margin-bottom: 20px;
