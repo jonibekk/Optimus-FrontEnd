@@ -3,7 +3,7 @@ import './style.css';
 import FormControl from '../../components/UI/FormControl';
 import Button from '../../components/UI/Button';
 import Logo from '../../components/UI/Logo';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Avatar from '../../components/UI/Avatar';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { getGmtTimezone, validEmail } from '../../components/Util/Utils';
@@ -63,17 +63,6 @@ const CreateTeam = (props) => {
         setInvites(rest);
     }
 
-    const onSubmit = (e) => {
-        if (canSubmit()) {
-            const formData = prepareData(data);
-            dispatch(CreateNewTeam(formData));
-            setData({ ...data, submitError: false });
-            history.push('/home');
-        } else {
-            setData({ ...data, submitError: true });
-        }
-    }
-
     const canSubmit = () => {
         return data.name.length > 0;
     }
@@ -90,6 +79,33 @@ const CreateTeam = (props) => {
 
         return fd;
     }
+
+    const onSubmit = (e) => {
+        if (canSubmit()) {
+            const formData = prepareData(data);
+            const res = dispatch(CreateNewTeam(formData));
+            res.then(success => {
+                if (success) {
+                    console.log('team create success: ', success);
+                    history.push('/home');
+                }
+            });
+        } else {
+            setData({ ...data, submitError: true });
+        }
+    }
+
+    useEffect(() => {
+        return () => {
+            setData({
+                name: 'New team',
+                image: null,
+                invite: '',
+                wrongEmail: false,
+                submitError: false
+            })
+        }
+    }, [dispatch, history])
 
     return auth.meData && (
         <div className='create-team-container'>

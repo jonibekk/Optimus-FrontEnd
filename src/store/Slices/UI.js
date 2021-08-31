@@ -1,10 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initUiState = {
+    loading: true,
     onActionCreate: false,
     activityHeatmap: null,
     actionsWidget: 0,
     goalsWidget: 0,
+    postDetails: null,
 }
 
 const UI = createSlice({
@@ -22,6 +24,14 @@ const UI = createSlice({
         },
         loadGoalsWidget(state, action) {
             state.goalsWidget = action.payload;
+        },
+        loadPostDetails(state, action) {
+            state.loading = false;
+            state.postDetails = action.payload;
+        },
+        cleanPostDetails(state, action) {
+            state.loading = true;
+            state.postDetails = null;
         },
         reset(state, action) {
             state.loading = true;

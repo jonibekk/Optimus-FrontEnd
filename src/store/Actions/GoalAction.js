@@ -21,7 +21,7 @@ export const getAllGoals = (teamId, userId) => {
             const subsGoals = goals.filter(goal => goal.user_id !== userId && goal.member.filter(user => user.id === userId).length > 0);
 
             await dispatch(goalActions.getMyGoals(myGoals));
-            await dispatch(goalActions.getMyGoalsIncSubs(subsGoals));
+            await dispatch(goalActions.getMySubGoals(subsGoals));
             await dispatch(goalActions.getAllGoals(goals));
         } catch (err) {
             dispatch(goalActions.error());
@@ -45,9 +45,8 @@ export const getCurrentGoalWithData = (goalId) => {
 
 export const createGoal = (teamId, userId, data) => async (dispatch) => {
     try {
-        const res = await axios.post(`${GOALS}/create`, data);
-        dispatch(getAllGoals(teamId, userId))
-        console.log(res.data);
+        await axios.post(`${GOALS}/create`, data);
+        await dispatch(getAllGoals(teamId, userId))
     } catch (err) {
         console.log(err.response.data);
     }
@@ -69,6 +68,15 @@ export const createAction = (goalId, krId, data) => async (dispatch) => {
         console.log(res.data);
         dispatch(loadFeedData());
         dispatch(loadActivityHeatmap())
+    } catch (err) {
+        console.log(err.response.data);
+    }
+}
+
+export const subscribeToGoalAction = (userId, teamId, goalId) => async dispatch => {
+    try {
+        await axios.post(`${GOALS}/${goalId}/subscribe`, { userId: userId, teamId: teamId });
+        await dispatch(getAllGoals(teamId, userId));
     } catch (err) {
         console.log(err.response.data);
     }

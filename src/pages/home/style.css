@@ -13,18 +13,18 @@
 
 .home-left-wrapper {
     padding-right: 5px;
+    flex: .35;
+    width: 100%;
 }
 .home-center-wrapper {
     min-width: 500px;
-    max-width: 600px;
+    max-width: 650px;
     overflow: auto;
     padding: 0 10px;
+    flex: .65;
 }
 .home-center-wrapper::-webkit-scrollbar {
   display: none;
-}
-.home-right-wrapper {
-    padding-left: 5px;
 }
 
 .emtpy_feed_img {
@@ -53,4 +53,15 @@
     padding-top: 20px;
     display: flex;
     column-gap: 20px;
+}
+
+@media only screen and (max-width: 1001px) {
+    .home-left-wrapper {
+        display: none;
+    }
+    .home-center-wrapper {
+        flex: 1;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

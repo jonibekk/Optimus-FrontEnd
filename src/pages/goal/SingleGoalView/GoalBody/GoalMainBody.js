@@ -53,7 +53,7 @@ const GoalMainBody = ({ goal }) => {
             <div className='goal-body-tabs'>
                 <div className='tab-item' style={toggleTab.keyResult ? toggleStyle : {}} onClick={() => onToggle('keyResult')}>
                     Key-Results
-                    {(isMmber) && <span className='tab-item-add' style={{ color: goal.color }} onClick={onToggleKr}>+Add</span>}
+                    {(toggleTab.keyResult && isMmber) && <span className='tab-item-add' style={{ color: goal.color }} onClick={onToggleKr}>+Add</span>}
                 </div>
                 <div className='tab-item' style={toggleTab.actions ? toggleStyle : {}} onClick={() => onToggle('actions')}>Actions</div>
             </div>

@@ -10,6 +10,7 @@ import SetAuth from '../../components/Util/SetAuth';
 
 import { REGISTER_NEW, LOGIN, ACCOUNT_ME, LOGOUT, INVITATION } from '../Api';
 import { getGmtTimezone } from '../../components/Util/Utils';
+import { getMyTeams } from './TeamAction';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
@@ -19,8 +20,9 @@ export const Auth = () => {
         const token = localStorage.getItem('jwt_token');
 
         if (SetAuth(token)) {
-            await axios.get(ACCOUNT_ME).then(res => {
-                dispatch(authActions.login(res.data.body));
+            await axios.get(ACCOUNT_ME).then(async res => {
+                await dispatch(authActions.login(res.data.body));
+                await dispatch(getMyTeams());
             }).catch(error => {
                 console.log(error.response.data);
                 dispatch(authActions.authError());

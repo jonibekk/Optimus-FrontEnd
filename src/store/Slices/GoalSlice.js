@@ -21,9 +21,13 @@ const goalSlice = createSlice({
             state.loading = false;
             state.currentGoal = action.payload
         },
-        getMyGoalsIncSubs(state, action) {
+        getMySubGoals(state, action) {
             state.loading = false;
             state.subscribedGoals = action.payload
+        },
+        subscribeToGoal(state, action) {
+            state.loading = false;
+            state.subscribedGoals = [action.payload, ...state.subscribedGoals];
         },
         getAllGoals(state, action) {
             state.loading = false;

@@ -7,9 +7,9 @@
 }
 
 .settings-main-wrapper {
-    padding-top: 50px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
+    padding: 50px 40px;
     margin-left: auto;
     margin-right: auto;
 }

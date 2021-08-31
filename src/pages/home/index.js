@@ -2,7 +2,6 @@
 import { useSelector } from 'react-redux';
 import CenterWrapper from './CenterWrapper';
 import LeftWrapper from './LeftWrapper';
-// import RightWrapper from './RightWrapper';
 import './style.css';
 
 const Home = () => {
@@ -17,9 +16,6 @@ const Home = () => {
             <section className='home-center-wrapper'>
                 <CenterWrapper />
             </section>
-            {/*<section className='home-right-wrapper'>
-                <RightWrapper />
-            </section>*/}
         </div>
     )
 }

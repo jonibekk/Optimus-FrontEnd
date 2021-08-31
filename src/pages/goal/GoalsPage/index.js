@@ -3,9 +3,8 @@ import SubscribedGoals from '../SubscribedGoals';
 import ExploreGoals from '../ExploreGoals';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { createGoal, getAllGoals } from '../../../store/Actions/GoalAction';
+import { createGoal } from '../../../store/Actions/GoalAction';
 import './style.css';
-import { getMyTeams } from '../../../store/Actions/TeamAction';
 
 const Goal = () => {
 
@@ -18,15 +17,7 @@ const Goal = () => {
         dispatch(createGoal(team.currentTeam.id, auth.meData.id, data));
     }
 
-    useEffect(() => {
-        if (team.currentTeam) {
-            if (!goals.myGoals) {
-                dispatch(getAllGoals(team.currentTeam.id, auth.meData.id));
-            }
-        } else {
-            dispatch(getMyTeams());
-        }
-    }, [dispatch, auth, team, goals]);
+    useEffect(() => { }, [dispatch]);
 
     const myGoals = goals.myGoals ?? [];
     const subscribedGoals = goals.subscribedGoals ?? [];

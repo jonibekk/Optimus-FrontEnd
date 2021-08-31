@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { postLike } from '../../../../store/Actions/PostAction';
 import './style.css'
 
 function PostItemContent({ data }) {
 
     const dispatch = useDispatch();
+    const history = useHistory();
     const auth = useSelector(state => state.auth)
     const [Liked, setLiked] = useState(false);
 
@@ -28,6 +30,14 @@ function PostItemContent({ data }) {
             })
     }
 
+    const onPostImgClicked = () => {
+        history.push({
+            pathname: `/post/${data.action.id}`,
+            search: '?details',
+            state: { prevPage: true }
+        });
+    }
+
     useEffect(() => {
         data.action.likes.forEach(like => {
             if (like.user_id === auth.meData.id) {
@@ -42,7 +52,7 @@ function PostItemContent({ data }) {
             <div className='post-item-content-wrapper'>
                 <span className='content-top-drop'></span>
                 <span className='content-goal-name'><i className="fas fa-bullseye goal-icon"></i>&nbsp; {data.action.goal.name}</span>
-                <img className='content-img' alt='content' src={data.media[0].file_url} />
+                <img onClick={onPostImgClicked} className='content-img' alt='content' src={data.media[0].file_url} />
                 <span className='content-bottom-drop'></span>
                 <div className='content-kr-info'>
                     <span><i className="fas fa-key kr-icon"></i>&nbsp; {data.action.key_result.name}</span>

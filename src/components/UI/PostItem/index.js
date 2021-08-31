@@ -10,7 +10,8 @@ const PostItem = ({ action }) => {
 
     const header = {
         user: action.user,
-        postedDate: action.created_at
+        postedDate: action.created_at,
+        postId: action.id
     }
     const content = {
         action: action,

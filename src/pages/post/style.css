@@ -1,0 +1,100 @@
+
+.post-details-container {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bkPagePrimary);
+}
+
+.post-details-wrapper {
+    max-width: 1600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+
+    display: flex;
+    column-gap: 15px;
+}
+
+.post-detials-top-imgs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+.post-detials-top-imgs > span {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.top-imgs-item {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 3px;
+}
+.top-imgs-item-active {
+    border: 2px solid var(--contentPrimary);
+}
+
+.post-detials-post-data {
+    height: 60vh;
+    border-radius: 20px 4px 4px 20px;
+    overflow: hidden;
+    background: var(--fgBlack);
+    flex: 2;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--boxShadowTabs);
+}
+
+.post-detials-comments {
+    flex: 1.2;
+    width: 100%;
+    padding: 10px;
+    background: var(--bkPageSecondary);
+    border-radius: 4px 20px 20px 4px;
+    box-shadow: var(--boxShadowTabs);
+    height: 60vh;
+}
+.post-detials-comment-form {
+    width: 100%;
+    height: 100px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--borderLine);
+}
+.comment-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.comment-form-actions > div {
+    display: flex;
+    align-items: center;
+}
+.comment-form-actions > div:first-child {
+    column-gap: 20px;
+}
+.comment-form-actions > div:first-child > div {
+    display: flex;
+}
+.comment-form-actions .post-item-liked {
+    color: var(--fgRed);
+}
+.comment-form-actions > div ion-icon {
+    font-size: 1.5em;
+}
+.comment-form-actions small {
+    color: var(--fgGray);
+    font-size: 0.9;
+    font-weight: bold;
+}
+.post-detials-comments-list {
+    padding-top: 10px;
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+}

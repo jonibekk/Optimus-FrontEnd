@@ -1,15 +1,45 @@
 
 .with-sidebar-container {
+    background: var(--bkPagePrimary);
+    width: 100vw;
+    height: 100vh
+}
+
+.with-sidebar-wrapper {
     display: flex;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .with-sidebar-section-sidebar {
     flex: 0.2;
-    width: 100%;
-    max-width: 300px;
-    background: var(--bkPageSecondary);
+    width: 260px;
+    background: var(--bkPagePrimary);
 }
 .with-sidebar-section-body {
     flex: 0.9;
     width: 100%;
     background: var(--bkPagePrimary);
+}
+
+.with-sidebar-section-mobile-toolbar {
+    display: none;
+}
+
+@media only screen and (max-width: 1201px) {
+    .with-sidebar-section-sidebar {
+        flex: 0.1;
+        max-width: 100px;
+    }
+}
+@media only screen and (max-width: 801px) {
+    .with-sidebar-section-sidebar {
+        display: none;
+    }
+    .with-sidebar-section-body {
+        flex: 1;
+    }
+    .with-sidebar-section-mobile-toolbar {
+        display: block;
+    }
 }

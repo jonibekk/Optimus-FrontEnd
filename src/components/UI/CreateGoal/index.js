@@ -7,7 +7,7 @@ import './style.css'
 
 const CreateGoal = ({ showModal, onclick, onCreateGoal }) => {
 
-    const [data, setData] = useState({ name: '', description: '', color: '#7543C1', dueDate: null, members: [] });
+    const [data, setData] = useState({ name: '', description: '', color: '#7543C1', dueDate: null });
 
     const onValueChange = (name, value) => setData({ ...data, [name]: value });
 
@@ -22,12 +22,9 @@ const CreateGoal = ({ showModal, onclick, onCreateGoal }) => {
             if (data.dueDate) {
                 fd.append('due_date', data.dueDate);
             }
-            if (data.members.length > 0) {
-                data.members.forEach(member => fd.append('members[]', member));
-            }
 
             onCreateGoal(fd);
-            setData({ name: '', description: '', color: '#7543C1', dueDate: null, members: [] });
+            setData({ name: '', description: '', color: '#7543C1', dueDate: null });
         }
     }
 
@@ -68,14 +65,6 @@ const CreateGoal = ({ showModal, onclick, onCreateGoal }) => {
                         <small>Due-date is the date where you stop making actions and see how far you go to achieve your goal.</small>
                         <div className='create-goal-due-data'>
                             <Button className='btn__primary' maxHeight='40px' />
-                        </div>
-                    </div>
-                    <div className='create-goal-item'>
-                        <label>Invite goal members:</label>
-                        <small>Goal members will be able to contribute to this goal with actions, but
-                         they will not be able to modify or delete goal settings</small>
-                        <div className='create-goal-members'>
-                            <Button className='btn__gray' maxHeight='40px' maxWidth='200px' text='Select members' />
                         </div>
                     </div>
                     <Button className='btn__primary' maxHeight='45px' text='Create a goal' onclick={onCreate} />

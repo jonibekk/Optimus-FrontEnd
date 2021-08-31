@@ -2,17 +2,6 @@
 
 .App {
   font-family: 'Nunito', sans-serif;
-}
-
-.temp-nav {
-  display: -webkit-flexbox;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
-  margin: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
+  height: 100%;
 }

@@ -36,3 +36,9 @@
     font-size: 3.5em;
     padding-top: 10px;
 }
+
+@media only screen and (max-width: 1201px) {
+    .goals-widget-lower {
+        font-size: 3em;
+    }
+}

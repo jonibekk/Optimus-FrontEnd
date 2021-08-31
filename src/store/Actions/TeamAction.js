@@ -19,12 +19,13 @@ export const getMyTeams = () => async (dispatch) => {
 export const CreateNewTeam = (data) => async (dispatch) => {
 
     try {
-        const res = await axios.post(CREATE_TEAM, data);
-        dispatch(teamActions.currentTeam(res.data.body));
-        dispatch(getMyTeams());
+        await axios.post(CREATE_TEAM, data);
+        await dispatch(getMyTeams());
+        return true;
     } catch (err) {
         console.log(err.message);
         dispatch(teamActions.error());
+        return false;
     }
 }
 

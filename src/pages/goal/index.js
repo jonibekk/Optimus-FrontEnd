@@ -4,8 +4,11 @@ import './style.css';
 
 import Goals from './GoalsPage';
 import SingleGoalView from './SingleGoalView';
+import { useEffect } from 'react';
 
 const Goal = () => {
+
+    useEffect(() => { }, []);
 
     return (
         <div>

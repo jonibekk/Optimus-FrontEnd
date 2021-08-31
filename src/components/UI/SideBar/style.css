@@ -1,18 +1,13 @@
 
 .sidebar-container {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 60px);
     border-right: 1px solid var(--borderLine);
     display: flex;
     flex-direction: column;
     position: relative;
-}
-.sidebar-logo-wrapper {
-    padding: 10px 50px;
-    margin-bottom: 40px;
-}
-.sidebar-logo-wrapper > .logo {
-    width: 150px;
+
+    padding-top: 30px;
 }
 
 .sidebar-option {
@@ -25,6 +20,7 @@
     cursor: pointer;
 
     display: flex;
+    align-items: center;
     justify-content: flex-start;
     column-gap: 30px;
 }
@@ -32,17 +28,14 @@
 .sidebar-option:hover > ion-icon {
     color: var(--contentPrimary);
 }
-.sidebar-option > span {
-    display: flex;
-    align-items: center;
-}
 .sidebar-option > ion-icon {
     font-size: 1.2em;
 }
 
 .sidebar-option-active {
-    background: var(--bkPrimaryShadow);
+    background: none;
     border-radius: var(--borderRounded);
+    font-weight: bolder;
 }
 .sidebar-option-active > span,
 .sidebar-option-active > ion-icon {
@@ -69,7 +62,7 @@
     cursor: pointer;
     column-gap: 20px;
 
-    background: var(--bkPageSecondary);
+    background: var(--bkPagePrimary);
     border-radius: var(--borderSquared);
     font-weight: 500;
     color: var(--fgGray);
@@ -80,12 +73,13 @@
 }
 .sidebar-settings > ion-icon {
     font-size: 25px;
+    align-items: center;
 }
 .sidebar-settings > span:last-child {
     font-size: 20px;
 }
 .sidebar-settings:hover {
-    background: var(--bkPagePrimary);
+    background: var(--bkPageSecondary);
 }
 
 .sidebar-settings:hover ion-icon {
@@ -93,4 +87,16 @@
 }
 .sidebar-settings:hover span:first-child {
     transform: rotateZ(-90deg);
+}
+
+@media only screen and (max-width: 1201px) {
+    .sidebar-option {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .sidebar-settings > span,
+    .sidebar-option > span {
+        display: none;
+    }
 }
