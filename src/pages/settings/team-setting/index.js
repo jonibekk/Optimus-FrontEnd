@@ -8,7 +8,7 @@ import {
     TEAM_OWNER,
     TEAM_ADMIN,
 } from '../../../enums/TeamMemberType'
-import { GetTeamUsersIncPending } from '../../../store/Actions/TeamAction';
+import { GetTeamUsersIncPending } from '../../../store/actions/TeamAction';
 import './style.css'
 
 const Team = ({ team, onShow, onUpdateTeamInfo }) => {

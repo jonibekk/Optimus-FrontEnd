@@ -3,7 +3,7 @@ import { connect, useDispatch, useSelector } from 'react-redux'
 import Avatar from '../../../components/UI/Avatar'
 import Button from '../../../components/UI/Button'
 import FormControl from '../../../components/UI/FormControl'
-import { updateMeProfile } from '../../../store/Actions/UserAction'
+import { updateMeProfile } from '../../../store/actions/UserAction'
 import './style.css'
 
 const Profile = () => {

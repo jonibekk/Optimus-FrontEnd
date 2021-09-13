@@ -7,12 +7,12 @@ import UnauthHeader from '../../components/UI/UnauthHeader';
 import FormInput from '../../components/UI/FormInput';
 import Button from '../../components/UI/Button';
 import Avatar from '../../components/UI/Avatar';
-import { RegisterByInvitation } from '../../store/Actions/AuthAction';
+import { RegisterByInvitation } from '../../store/actions/AuthAction';
 import { validPassword } from '../../components/Util/Utils';
 
 import './style.css';
 
-import { INVITATION } from '../../store/Api';
+import { INVITATION } from '../../store/api';
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
 const Invitation = () => {

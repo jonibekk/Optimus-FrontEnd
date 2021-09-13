@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { userActions } from '../Slices/UserSlice';
+import { userActions } from '../slices/UserSlice';
 
-import { USER } from '../Api';
+import { USER } from '../api';
 import { Auth } from './AuthAction';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;

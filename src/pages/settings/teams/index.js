@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router';
 import Avatar from '../../../components/UI/Avatar';
 import Pie from '../../../components/UI/ProgressPie';
-import { getMyTeams, updateTeamInfo } from '../../../store/Actions/TeamAction';
+import { getMyTeams, updateTeamInfo } from '../../../store/actions/TeamAction';
 import {
     TEAM_OWNER,
     TEAM_ADMIN,

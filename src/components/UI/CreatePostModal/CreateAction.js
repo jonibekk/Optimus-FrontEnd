@@ -13,15 +13,15 @@ import {
     TYPE_CNY,
     TYPE_EUR
 } from '../../../enums/CurrencyType';
-import { createAction, getAllGoals } from '../../../store/Actions/GoalAction';
+import { createAction, getAllGoals } from '../../../store/actions/GoalAction';
 import Avatar from '../Avatar'
 import Button from '../Button';
 import FormControl from '../FormControl';
 import ModalAttachmentPreview from './ModalAttachmentPreview';
 import ModalMediaPreview from './ModalMediaPreview';
-import './style.css'
 import MentionMultiLineInput from '../MentionMultiLine';
-import { getAllUsers } from '../../../store/Actions/UserAction';
+
+import './style.css'
 
 
 const KrItem = ({ kr, selected, onclick, onSetKrValue }) => {
@@ -86,7 +86,6 @@ const CreateAction = ({ onclick, showModal }) => {
     const goal = useSelector(state => state.goal);
     const auth = useSelector(state => state.auth);
     const team = useSelector(state => state.team);
-    const user = useSelector(state => state.user);
 
     const [previewImgs, setPreviewImg] = useState([]);
     const [attachments, setAttachments] = useState([]);
@@ -214,7 +213,7 @@ const CreateAction = ({ onclick, showModal }) => {
             discard();
             onclick();
         } else {
-            alert('You need to upload at least one image, and describe your action to create it.');
+            alert('Make sure to include Image/Video content as well as description!');
         }
     }
 
@@ -222,15 +221,7 @@ const CreateAction = ({ onclick, showModal }) => {
         if (auth.meData && team.currentTeam) {
             dispatch(getAllGoals(team.currentTeam.id, auth.meData.id));
         }
-        if (auth.meData && team.currentTeam && !user.users) {
-            dispatch(getAllUsers(team.currentTeam.id));
-        }
-    }, [dispatch, auth, team, user]);
-
-    const dataItems = user.users && user.users.map(user => ({
-        id: user.id,
-        display: `${user.first_name} ${user.last_name}`
-    }));
+    }, [dispatch, auth, team]);
 
     return (
         <div className="post-modal" style={{ 'display': showModal ? 'block' : 'none' }}>
@@ -241,7 +232,7 @@ const CreateAction = ({ onclick, showModal }) => {
                     <span className="model-close" onClick={onClose}>&times;</span>
                 </div>
                 <div className='post-modal-body'>
-                    <MentionMultiLineInput data={dataItems} value={body.name} onChange={onBodyChange} onAdd={onAddMention} />
+                    <MentionMultiLineInput value={body.name} onChange={onBodyChange} onAdd={onAddMention} />
 
                     <div className='dropdown select-goal'>
                         <div className="choose-goal-dropdown" id="goals-dropdown" data-bs-toggle="dropdown" aria-expanded="false">

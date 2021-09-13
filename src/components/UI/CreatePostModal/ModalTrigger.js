@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux'
 import Avatar from '../Avatar'
 import './style.css'
@@ -5,6 +6,8 @@ import './style.css'
 function ModalTrigger({ onclick }) {
 
     const auth = useSelector(state => state.auth);
+
+    useEffect(() => { }, [auth]);
 
     return (
         <div className='post-modal-trigger-ui' onClick={onclick}>

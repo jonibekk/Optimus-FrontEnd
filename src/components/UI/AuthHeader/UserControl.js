@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
-import { Logout } from '../../../store/Actions/AuthAction';
+import { Logout } from '../../../store/actions/AuthAction';
 import Avatar from '../Avatar';
 
 import './style.css';

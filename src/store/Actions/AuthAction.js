@@ -1,14 +1,14 @@
 import axios from 'axios';
-import { authActions } from '../Slices/AuthSlice';
-import { chatActions } from '../Slices/ChatSlice';
-import { goalActions } from '../Slices/GoalSlice';
-import { homeFeedActions } from '../Slices/HomeFeedSlice';
-import { teamActions } from '../Slices/TeamSlice';
-import { UiActions } from '../Slices/UI';
-import { userActions } from '../Slices/UserSlice';
+import { authActions } from '../slices/AuthSlice';
+import { chatActions } from '../slices/ChatSlice';
+import { goalActions } from '../slices/GoalSlice';
+import { homeFeedActions } from '../slices/HomeFeedSlice';
+import { teamActions } from '../slices/TeamSlice';
+import { UiActions } from '../slices/UI';
+import { userActions } from '../slices/UserSlice';
 import SetAuth from '../../components/Util/SetAuth';
 
-import { REGISTER_NEW, LOGIN, ACCOUNT_ME, LOGOUT, INVITATION } from '../Api';
+import { REGISTER_NEW, LOGIN, ACCOUNT_ME, LOGOUT, INVITATION } from '../api';
 import { getGmtTimezone } from '../../components/Util/Utils';
 import { getMyTeams } from './TeamAction';
 
@@ -20,13 +20,14 @@ export const Auth = () => {
         const token = localStorage.getItem('jwt_token');
 
         if (SetAuth(token)) {
-            await axios.get(ACCOUNT_ME).then(async res => {
+            try {
+                const res = await axios.get(ACCOUNT_ME);
                 await dispatch(authActions.login(res.data.body));
                 await dispatch(getMyTeams());
-            }).catch(error => {
-                console.log(error.response.data);
+            } catch (err) {
+                console.log(err.response.data);
                 dispatch(authActions.authError());
-            })
+            }
         }
         else {
             dispatch(authActions.authError());

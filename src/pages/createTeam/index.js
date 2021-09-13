@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import Avatar from '../../components/UI/Avatar';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { getGmtTimezone, validEmail } from '../../components/Util/Utils';
-import { CreateNewTeam } from '../../store/Actions/TeamAction'
+import { CreateNewTeam } from '../../store/actions/TeamAction'
 import { useHistory } from 'react-router-dom';
 
 

@@ -1,7 +1,7 @@
 import { memo, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
-import { getCurrentGoalWithData } from '../../../store/Actions/GoalAction';
+import { getCurrentGoalWithData } from '../../../store/actions/GoalAction';
 import EmptyGoal from '../../../assets/goal.svg'
 import GoalHeader from './GoalHeader'
 import GoalBody from './GoalBody'

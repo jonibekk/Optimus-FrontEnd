@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 
-import { subscribeToGoalAction } from '../../../store/Actions/GoalAction';
+import { subscribeToGoalAction } from '../../../store/actions/GoalAction';
 
 import Avatar from '../Avatar'
 import Button from '../Button';

@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import AuthSliceReducer from './Slices/AuthSlice';
-import HomeFeedReducer from './Slices/HomeFeedSlice';
-import GoalSlice from './Slices/GoalSlice';
-import TeamSlice from './Slices/TeamSlice';
-import UserSlice from './Slices/UserSlice';
-import ChatSlice from './Slices/ChatSlice';
-import UI from './Slices/UI';
+import AuthSliceReducer from './slices/AuthSlice';
+import HomeFeedReducer from './slices/HomeFeedSlice';
+import GoalSlice from './slices/GoalSlice';
+import TeamSlice from './slices/TeamSlice';
+import UserSlice from './slices/UserSlice';
+import ChatSlice from './slices/ChatSlice';
+import UI from './slices/UI';
 
 const store = configureStore({
     reducer: {

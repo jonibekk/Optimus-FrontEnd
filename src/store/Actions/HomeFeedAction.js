@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-import { homeFeedActions } from '../Slices/HomeFeedSlice';
-import { LOAD_FEED } from '../Api';
+import { homeFeedActions } from '../slices/HomeFeedSlice';
+import { LOAD_FEED } from '../api';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 

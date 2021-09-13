@@ -11,7 +11,7 @@ import Button from '../Button';
 import { validEmail } from '../../Util/Utils';
 import './style.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { inviteNewUserToTeam } from '../../../store/Actions/TeamAction';
+import { inviteNewUserToTeam } from '../../../store/actions/TeamAction';
 
 const TeamMembers = ({ height, OwnerOrAdmin, members, pendingMembers }) => {
 

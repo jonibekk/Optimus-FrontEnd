@@ -4,7 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import Button from '../../components/UI/Button';
 import './style.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { Login } from '../../store/Actions/AuthAction';
+import { Login } from '../../store/actions/AuthAction';
 import UnauthHeader from '../../components/UI/UnauthHeader';
 import FormInput from '../../components/UI/FormInput';
 

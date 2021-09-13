@@ -3,7 +3,7 @@ import SubscribedGoals from '../SubscribedGoals';
 import ExploreGoals from '../ExploreGoals';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { createGoal } from '../../../store/Actions/GoalAction';
+import { createGoal } from '../../../store/actions/GoalAction';
 import './style.css';
 
 const Goal = () => {

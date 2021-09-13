@@ -4,7 +4,7 @@ import CreateKeyResult from '../../../../components/UI/CreateKeyResult';
 import CreateAction from '../../../../components/UI/CreatePostModal/CreateAction';
 import GoalMainActions from './GoalMainActions';
 import GoalMainKeyResults from './GoalMainKeyResults';
-import { createKr, getCurrentGoalWithData } from '../../../../store/Actions/GoalAction';
+import { createKr, getCurrentGoalWithData } from '../../../../store/actions/GoalAction';
 import './style.css'
 import { useParams } from 'react-router';
 

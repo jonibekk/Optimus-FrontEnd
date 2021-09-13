@@ -1,7 +1,7 @@
 import axios from "axios";
-import { UiActions } from '../Slices/UI';
+import { UiActions } from '../slices/UI';
 import { loadFeedData } from "./HomeFeedAction";
-import { ACTION } from "../Api";
+import { ACTION } from "../api";
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 

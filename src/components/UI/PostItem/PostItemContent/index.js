@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { postLike } from '../../../../store/Actions/PostAction';
+import { postLike } from '../../../../store/actions/PostAction';
 import './style.css'
 
 function PostItemContent({ data }) {

@@ -1,5 +1,5 @@
 
-.actions-widget {
+.feed-widgets-wrapper {
     padding: 10px 15px;
     padding-bottom: 1px;
     border-radius: 20px;
@@ -10,28 +10,28 @@
     transition: all .2s ease-in-out;
     cursor: pointer;
 }
-.actions-widget:hover {
+.feed-widgets-wrapper:hover {
     transform: scale(1.05);
 }
 
-.actions-widget-upper {
+.feed-widgets-upper {
     display: flex;
     column-gap: 10px;
     align-items: center;
 }
-.actions-widget-upper > ion-icon {
+.feed-widgets-upper > ion-icon {
     font-size: 2em;
 }
-.actions-widget-upper > div {
+.feed-widgets-upper > div {
     height: 2em;
     border: 2px solid var(--contentPrimary);
     border-radius: 4px;
 }
-.actions-widget-upper > span {
+.feed-widgets-upper > span {
     font-size: 1.1em;
 }
 
-.actions-widget-lower {
+.feed-widgets-lower {
     overflow: hidden;
     line-height: 60px;
     font-size: 3.5em;
@@ -39,7 +39,7 @@
 }
 
 @media only screen and (max-width: 1201px) {
-    .actions-widget-lower {
+    .feed-widgets-lower {
         font-size: 3em;
     }
 }

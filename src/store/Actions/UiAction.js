@@ -1,12 +1,14 @@
 import axios from 'axios';
-import { UiActions } from '../Slices/UI';
+import { UiActions } from '../slices/UI';
 
-import { LOAD_FEED_WIDGETS } from '../Api';
+import { LOAD_FEED_WIDGETS } from '../api';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 
 export const actionCreateTrigger = (flag) => {
-    return (dispatch) => dispatch(UiActions.actionCreate(flag));
+    return async (dispatch) => {
+        await dispatch(UiActions.actionCreate(flag));
+    }
 }
 
 export const loadActivityHeatmap = () => async (dispatch) => {

@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
 import { ACTION_TYPE_MEDIA, ACTION_TYPE_FILE } from '../../enums/FileType';
-import { cleanPostDetails, postDetails } from '../../store/Actions/PostAction';
+import { postDetails } from '../../store/actions/PostAction';
 import AuthHeader from '../../components/UI/AuthHeader';
 import './style.css'
 import CommentItem from '../../components/UI/CommentItem';
-import { Fragment } from 'react';
 import Avatar from '../../components/UI/Avatar';
 
 const Post = ({ location }) => {
@@ -31,6 +30,7 @@ const Post = ({ location }) => {
 
         const media = post.attached_file.filter(file => file.file_type === ACTION_TYPE_MEDIA);
         const attachments = post.attached_file.filter(file => file.file_type === ACTION_TYPE_FILE);
+        console.log(attachments);
 
         if (CurrentImg === null) {
             setCurrentImg(media[0].file_url);

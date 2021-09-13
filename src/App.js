@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 import SetAuth from './components/Util/SetAuth';
-import { Auth } from './store/Actions/AuthAction';
+import { Auth } from './store/actions/AuthAction';
 import './App.css';
 import Landing from './pages/landing';
 import SignIn from './pages/signin';

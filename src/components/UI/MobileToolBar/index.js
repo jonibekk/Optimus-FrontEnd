@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
-import { actionCreateTrigger } from '../../../store/Actions/UiAction';
+import { actionCreateTrigger } from '../../../store/actions/UiAction';
 import Button from '../Button';
 import CreateAction from '../CreatePostModal/CreateAction';
 import MobileBarOption from './SideBarOption';

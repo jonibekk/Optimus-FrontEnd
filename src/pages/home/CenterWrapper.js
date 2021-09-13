@@ -3,10 +3,10 @@ import './style.css'
 import PostItem from '../../components/UI/PostItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { loadFeedData } from '../../store/Actions/HomeFeedAction';
+import { loadFeedData } from '../../store/actions/HomeFeedAction';
 import empty_feed from '../../assets/EmptyFeed.svg';
 import ModalTrigger from '../../components/UI/CreatePostModal/ModalTrigger';
-import { actionCreateTrigger } from '../../store/Actions/UiAction';
+import { actionCreateTrigger } from '../../store/actions/UiAction';
 
 const CenterWrapper = () => {
 

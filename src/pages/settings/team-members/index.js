@@ -3,7 +3,7 @@ import { TEAM_ADMIN, TEAM_OWNER } from '../../../enums/TeamMemberType';
 import TeamMembersList from '../../../components/UI/team-members'
 import './style.css'
 import { useEffect } from 'react';
-import { GetTeamUsersIncPending } from '../../../store/Actions/TeamAction';
+import { GetTeamUsersIncPending } from '../../../store/actions/TeamAction';
 
 const TeamMembers = () => {
 

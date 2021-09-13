@@ -4,8 +4,8 @@ const initUiState = {
     loading: true,
     onActionCreate: false,
     activityHeatmap: null,
-    actionsWidget: 0,
-    goalsWidget: 0,
+    actionsWidgetCount: 0,
+    goalsWidgetCount: 0,
     postDetails: null,
 }
 
@@ -20,10 +20,10 @@ const UI = createSlice({
             state.activityHeatmap = action.payload;
         },
         loadActionsWidget(state, action) {
-            state.actionsWidget = action.payload;
+            state.actionsWidgetCount = action.payload;
         },
         loadGoalsWidget(state, action) {
-            state.goalsWidget = action.payload;
+            state.goalsWidgetCount = action.payload;
         },
         loadPostDetails(state, action) {
             state.loading = false;
@@ -36,8 +36,8 @@ const UI = createSlice({
         reset(state, action) {
             state.loading = true;
             state.activityHeatmap = null;
-            state.actionsWidget = 0;
-            state.goalsWidget = 0;
+            state.actionsWidgetCount = 0;
+            state.goalsWidgetCount = 0;
         }
     }
 });

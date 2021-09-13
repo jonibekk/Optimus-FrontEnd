@@ -4,7 +4,7 @@ import Button from '../Button';
 import SideBarOption from './SideBarOption';
 import CreateAction from '../CreatePostModal/CreateAction';
 import { useDispatch, useSelector } from 'react-redux';
-import { actionCreateTrigger } from '../../../store/Actions/UiAction';
+import { actionCreateTrigger } from '../../../store/actions/UiAction';
 import UseWindowDimensions from '../../Util/UseWindowDimentions';
 import './style.css';
 
@@ -51,7 +51,7 @@ const SideBar = () => {
                 <ion-icon name="settings-outline"></ion-icon>
                 <span>Settings</span>
             </div>
-            <CreateAction onclick={onActionCreate} showModal={uiState.onActionCreate} />
+            {uiState.onActionCreate && <CreateAction onclick={onActionCreate} showModal={uiState.onActionCreate} />}
         </div>
     )
 }

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 import dayjs from 'dayjs';
 import CalendarHeatmap from "react-calendar-heatmap";
-import { loadActivityHeatmap } from "../../../store/Actions/UiAction";
+import { loadActivityHeatmap } from "../../../store/actions/UiAction";
 
 import { shiftDate } from '../../Util/Utils';
 

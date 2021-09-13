@@ -1,0 +1,69 @@
+
+.dashboard-container {
+    padding: 40px;
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.dashboard-title {
+    font-weight: bold;
+}
+
+.widgets-wrapper {
+    width: 100%;
+    display: flex;
+    column-gap: 30px;
+}
+
+.dashboard-statistics-wrapper,
+.dashboard-statistics-wrapper > div {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.dashboard-statistics-wrapper {
+    column-gap: 50px;
+}
+
+.dashboard-select-quarter,
+.dashboard-select-quarter > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.dashboard-select-quarter > div {
+    padding: 2px;
+    border: 1px solid var(--borderLine);
+    background: var(--bkPageSecondary);
+    border-radius: var(--borderSquared);
+}
+
+.dashboard-select-year > small,
+.dashboard-select-quarter > small {
+    font-weight: 600;
+}
+
+.dashboard-select-Q-item {
+    padding: 5px 30px;
+    font-weight: bolder;
+    color: var(--fgGray);
+    border-radius: var(--borderSquared);
+    cursor: pointer;
+}
+.Q-item-selected {
+    background: var(--fgPrimary);
+    color: white;
+}
+
+.dashboard-select-y-item {
+    padding: 7px 15px;
+    width: 100px;
+    text-align: center;
+    background: var(--bkPageSecondary);
+    border: 1px solid var(--borderLine);
+    border-radius: var(--borderSquared);
+}

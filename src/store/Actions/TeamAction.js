@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { teamActions } from '../Slices/TeamSlice';
+import { teamActions } from '../slices/TeamSlice';
 
-import { CREATE_TEAM, LOAD_TEAMS, TEAM, EMAIL_INVITE_MEMBERS } from '../Api';
+import { CREATE_TEAM, LOAD_TEAMS, TEAM, EMAIL_INVITE_MEMBERS } from '../api';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
 

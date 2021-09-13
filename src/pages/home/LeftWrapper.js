@@ -1,8 +1,7 @@
 import './style.css'
 
 import ActivityGraph from '../../components/Widgets/ActivityGraph'
-import ActionsWidget from '../../components/Widgets/Actions'
-import GoalsWidget from '../../components/Widgets/Goals'
+import FeedWidget from '../../components/Widgets/FeedWidget'
 
 const LeftWrapper = () => {
     return (
@@ -11,8 +10,8 @@ const LeftWrapper = () => {
                 <ActivityGraph numberOfDays={-90} />
             </div>
             <div className='left-wrap-action-goal-widgets'>
-                <ActionsWidget />
-                <GoalsWidget />
+                <FeedWidget goal />
+                <FeedWidget action />
             </div>
         </div>
     )

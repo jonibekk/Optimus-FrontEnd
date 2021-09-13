@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { getAllUsers } from '../../../store/Actions/UserAction';
+import { getAllUsers } from '../../../store/actions/UserAction';
 import './style.css'
 
 const Integrations = () => {
